@@ -17,7 +17,7 @@
   -         --> A0
   -         --> A1
   -         --> A2
-/**/
+*/
 
 #include <Arduino.h>
 #include <ClickEncoder.h>
