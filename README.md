@@ -4,19 +4,19 @@
 
 ## Parts list
 - Arduino Nano
-- Rotary encoder
+- Rotary encoder w. click (Something like https://www.elextra.dk/details/H35684/rotary-encoder-18-trin-m-trykknap-funktion)
 - ST7735 1.8" TFT
 
 ## Pins
 *Connection between ST7735 and Arduino Nano*
-- VCC     --> 5V
-- GND     --> GND
-- CS      --> D10
-- RESET   --> D8
-- A0 / DC --> D9
-- SDA     --> D11
-- SCK     --> D13
-- LED     --> 3V3
+- <kbd>VCC</kbd> ⟶ <kbd>5V</kbd>
+- <kbd>GND</kbd> ⟶ <kbd>GND</kbd>
+- <kbd>CS</kbd> ⟶ <kbd>D10</kbd>
+- <kbd>RESET</kbd> ⟶ <kbd>D8</kbd>
+- <kbd>A0 / DC</kbd> ⟶ <kbd>D9</kbd>
+- <kbd>SDA</kbd> ⟶ <kbd>D11</kbd>
+- <kbd>SCK</kbd> ⟶ <kbd>D13</kbd>
+- <kbd>LED</kbd> ⟶ <kbd>3V3</kbd>
 
 ## Interface
 Everything is controls by either turning, clicking or holding the rotary encoder:
