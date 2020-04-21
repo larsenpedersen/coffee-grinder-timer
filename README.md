@@ -11,6 +11,7 @@ The project is built in Visual Studio Code.
 - ST7735 1.8" TFT
 - Rotary encoder w. click (Something like https://www.elextra.dk/details/H35684/rotary-encoder-18-trin-m-trykknap-funktion)
 - Relay(s) (*I don't really know much about relays and am still experimenting with this. When I originally started this project I did [this drawing for my Mazzer Super Jolly](http://coffee.larsenpedersen.com/mazzersuperjolly/wiringdiagram-relay.png), so perhaps two relays are needed.*)
+- Possibly some sort of power supply
 
 ## Pins
 **Connection between ST7735 and Arduino Nano**
@@ -33,7 +34,11 @@ The project is built in Visual Studio Code.
 
 **Connection between relay and Arduino Nano**
 
-*I don't have any specifications for this, as mine is currently not hooked up.*
+*These specifications are speculations as I currently don't have a relay hooked up - but it should be [fairly simpel](https://lastminuteengineers.com/one-channel-relay-module-arduino-tutorial/):*
+
+- <kbd>GND</kbd> ⟶ <kbd>GND</kbd>
+- <kbd>VCC</kbd> ⟶ <kbd>5V</kbd>
+- <kbd>IN</kbd> ⟶ <kbd>D2</kbd>
 
 ## Interface
 Everything is controls by either turning, clicking or holding the rotary encoder:
