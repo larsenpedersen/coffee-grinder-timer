@@ -26,7 +26,7 @@
 #include "display.h"
 
 // Relay settings
-#define RELAY 2
+#define RELAY 2 // Relay on pin 2
 #define RELAY_ON LOW
 #define RELAY_OFF HIGH
 
@@ -42,8 +42,8 @@ uint16_t DOUBLESHOT_TEMP; // Max 65,535 milliseconds because of datatype
 
 // States
 uint8_t prevMenu = 255; // High number to ensure that start screen gets drawn
-uint8_t realPrevMenu = 0;
-uint8_t currentMenu = 0;
+uint8_t realPrevMenu = 0; // Default settings: 0
+uint8_t currentMenu = 0; // Default settings: 0
 uint8_t inQuickSettings = 0; // Bool
 uint8_t inGrindMode = 0; // Bool
 uint8_t showValue = 0; // Bool
@@ -101,7 +101,6 @@ void renderDisplay () {
 
 void writeToEEPROM ( uint8_t location ) {
   uint16_t tempEEPROMVal;
-  // check if value at location is different from original
   EEPROM.get ( location, tempEEPROMVal );
   if ( location == EEPROM_LOC_SINGLESHOT && tempEEPROMVal != SINGLESHOT ) {
     EEPROM.put ( location, SINGLESHOT );
@@ -139,21 +138,21 @@ void setGrindState () {
 }
 
 void startGrind ( uint16_t grindTime ) {
-  if ( !grindActive ) { // Start GRINDING
+  if ( !grindActive ) { // START GRINDING
     grindUntil = millis () + grindTime;
     grindActive = true;
     setGrindState ();
     relayOn ();
-  } else if ( grindActive && millis () < grindUntil ) { // While grinding
-    if (encoderButton == 5) {
-      grindUntil = 0; // Cancel grinding while grinding
+  } else if ( grindActive && millis () < grindUntil ) { // WHILE GRINDING
+    if (encoderButton == 5) { // CLICK --> CANCEL GRINDING WHILE GRINDING
+      grindUntil = 0;
       relayOff ();
     }
     uint16_t timePassed = grindTime - (grindUntil -  millis () );
     timePassed = map ( timePassed, 0, grindTime, 0, 128 );
     drawProgress ( timePassed );
   } else {
-    if ( millis () > grindUntil ) { // Grinding ended
+    if ( millis () > grindUntil ) { // GRINDING ENDED
       relayOff();
       grindUntil = 0;
       grindActive = false;
@@ -212,7 +211,7 @@ void loop ( void ) {
           relayOn ();
           grindActive = true;
           setGrindState ();
-        } else if ( encoderButton == 4) {
+        } else if ( encoderButton == 4) { // HOLD --> START GRINDING
           relayOff ();
           grindActive = false;
           setGrindState ();
@@ -236,7 +235,7 @@ void loop ( void ) {
           currentMenu = 1;
         }
 
-        if ( encoderButton == 5 ) {
+        if ( encoderButton == 5 ) { // CLICK --> START GRINDING
           inGrindMode = true;
         }
 
@@ -244,7 +243,7 @@ void loop ( void ) {
           startGrind(SINGLESHOT);
         }
 
-        if ( encoderButton == 4 ) { // Settings
+        if ( encoderButton == 4 ) { // HOLD --> ENTER SETTINGS
           inQuickSettings = true;
           currentMenu = 4;
         }
@@ -261,7 +260,7 @@ void loop ( void ) {
           currentMenu = 2;
         }
 
-        if ( encoderButton == 5  ) {
+        if ( encoderButton == 5  ) { // CLICK --> START GRINDING
           inGrindMode = true;
         }
 
@@ -269,7 +268,7 @@ void loop ( void ) {
           startGrind(DOUBLESHOT);
         }
 
-        if ( encoderButton == 4 ) { // Settings
+        if ( encoderButton == 4 ) { // HOLD --> ENTER SETTINGS
           inQuickSettings = true;
           currentMenu = 4;
         }
@@ -301,16 +300,16 @@ void loop ( void ) {
           screenQuickSettingsValue ( SINGLESHOT_TEMP );
         }
 
-        if ( encoderButton == 5  ) { // Save settings on click
+        if ( encoderButton == 5  ) { // CLICK --> SAVE SETTINGS
           SINGLESHOT = SINGLESHOT_TEMP;
           writeToEEPROM ( EEPROM_LOC_SINGLESHOT );
           inQuickSettings = false;
-          currentMenu = 5; // !!! Change to 2, if you don't want save confirmation anymore
+          currentMenu = 5;
           showValue = false;
           encoder->setAccelerationEnabled ( false );
         }
 
-        if ( encoderButton == 4 ) { // Cancel settings on hold
+        if ( encoderButton == 4 ) { // HOLD --> CANCEL SETTINGS
           SINGLESHOT_TEMP = SINGLESHOT;
           inQuickSettings = false;
           currentMenu = 6;
@@ -340,16 +339,16 @@ void loop ( void ) {
           screenQuickSettingsValue ( DOUBLESHOT_TEMP );
         }
 
-        if ( encoderButton == 5  ) { // Save settings on click
+        if ( encoderButton == 5  ) { // CLICK --> SAVE SETTINGS
           DOUBLESHOT = DOUBLESHOT_TEMP;
           writeToEEPROM ( EEPROM_LOC_DOUBLESHOT );
           inQuickSettings = false;
-          currentMenu = 5; // !!! Change to 3, if you don't want save confirmation anymore
+          currentMenu = 5;
           showValue = false;
           encoder->setAccelerationEnabled ( false );
         }
 
-        if ( encoderButton == 4 ) { // Cancel settings on hold
+        if ( encoderButton == 4 ) { // HOLD --> CANCEL SETTINGS
           DOUBLESHOT_TEMP = DOUBLESHOT;
           inQuickSettings = false;
           currentMenu = 6;
