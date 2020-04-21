@@ -32,6 +32,7 @@ The project is built in Visual Studio Code.
 - <kbd>Button pin 2</kbd> ⟶ <kbd>GND</kbd>
 
 **Connection between relay and Arduino Nano**
+
 *I don't have any specifications for this, as mine is currently not hooked up.*
 
 ## Interface
