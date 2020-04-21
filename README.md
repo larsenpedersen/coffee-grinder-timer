@@ -1,6 +1,6 @@
 # Coffee Grinder Timer ☕️
 
-The project was started when I bought a used Mazzer Super Jolly and wanted to mod it an control it based on time.
+The project was started when I bought a used Mazzer Super Jolly and wanted to mod it and control it based on time. I removed the doser from the grinder, added a funnel, had the grinder repainted, and started working on this project.
 
 The project is built in Visual Studio Code.
 
