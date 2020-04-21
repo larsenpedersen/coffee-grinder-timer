@@ -1,1 +1,4 @@
-# coffee-grinder-timer
+# Coffee Grinder Timer ☕️
+
+## Parts list
+* Arduino Nano
