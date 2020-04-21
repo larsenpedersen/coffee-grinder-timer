@@ -21,7 +21,8 @@
 ## Interface
 Everything is controls by either turning, clicking or holding the rotary encoder:
 
-- <kbd>Turn</kbd>: Pick grinding option:
+**General**
+- <kbd>Turn</kbd> to pick one of the following grinding options:
 
 - **Manual grinding**
   - <kbd>Hold (∞)</kbd> to grind
