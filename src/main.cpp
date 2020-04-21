@@ -1,6 +1,4 @@
 /*
-  Arduino Nano
-
   Display (1.8" TFT ST7735):
   - VCC     --> 5V
   - GND     --> GND
