@@ -5,3 +5,6 @@
 .pio
 .vscode
 .DS_Store
+.AppleDouble
+.pio/
+.vscode/
