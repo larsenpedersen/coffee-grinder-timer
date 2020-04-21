@@ -26,7 +26,7 @@
 #include "display.h"
 
 // Relay settings
-#define RELAY 2 // Relay on pin 2
+#define RELAY 2 // Relay on pin D2
 #define RELAY_ON LOW
 #define RELAY_OFF HIGH
 
