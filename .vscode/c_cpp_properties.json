@@ -7,7 +7,7 @@
             "name": "Mac",
             "macFrameworkPath": [],
             "includePath": [
-                "/Users/larsenpedersen/Dropbox/Projects/Arduino/CoffeeGrinderST7735UCGLib-8 - shareable/src",
+                "/Users/larsenpedersen/Dropbox/Projects/Arduino/coffee-grinder-timer/src",
                 "/Users/larsenpedersen/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
                 "/Users/larsenpedersen/.platformio/lib/TimerOne_ID131",
                 "/Users/larsenpedersen/.platformio/lib/ClickEncoder_ID291",
@@ -36,7 +36,7 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "/Users/larsenpedersen/Dropbox/Projects/Arduino/CoffeeGrinderST7735UCGLib-8 - shareable/src",
+                    "/Users/larsenpedersen/Dropbox/Projects/Arduino/coffee-grinder-timer/src",
                     "/Users/larsenpedersen/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
                     "/Users/larsenpedersen/.platformio/lib/TimerOne_ID131",
                     "/Users/larsenpedersen/.platformio/lib/ClickEncoder_ID291",
