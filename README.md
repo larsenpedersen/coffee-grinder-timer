@@ -41,7 +41,7 @@ The project is built in Visual Studio Code.
 - <kbd>IN</kbd> ⟶ <kbd>D2</kbd>
 
 ## Interface
-Everything is controls by either turning, clicking or holding the rotary encoder:
+Everything is controls by either turning (<kbd>Turn</kbd>), clicking (<kbd>Click</kbd>) or holding (Hold (∞)) / holding+releasing (Hold (2s)+R) the rotary encoder:
 
 **General**
 - <kbd>Turn</kbd> to pick one of the following grinding options:
@@ -52,15 +52,15 @@ Everything is controls by either turning, clicking or holding the rotary encoder
 - **Single grinding**
   - <kbd>Click</kbd> to start grinding
     - <kbd>Click</kbd> to cancel grinding 
-  - <kbd>Hold (2s)</kbd> to enter settings:
+  - <kbd>Hold (2s)+R</kbd> to enter settings:
     - <kbd>Turn</kbd> to change time
     - <kbd>Click</kbd> to save settings
-    - <kbd>Hold (2s)</kbd> to exit settings without saving
+    - <kbd>Hold (2s)+R</kbd> to exit settings without saving
 
 - **Double grinding**
   - <kbd>Click</kbd> to start grinding
     - <kbd>Click</kbd> to cancel grinding 
-  - <kbd>Hold (2s)</kbd> to enter settings:
+  - <kbd>Hold (2s)+R</kbd> to enter settings:
     - <kbd>Turn</kbd> to change time
     - <kbd>Click</kbd> to save settings
-    - <kbd>Hold (2s)</kbd> to exit settings without saving
+    - <kbd>Hold (2s)+R</kbd> to exit settings without saving
