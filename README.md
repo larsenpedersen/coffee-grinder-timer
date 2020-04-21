@@ -8,7 +8,7 @@ The project is built in Visual Studio Code.
 
 ## Parts list
 - Arduino Nano
-- ST7735 1.8" TFT
+- ST7735 1.8" TFT (https://www.ebay.co.uk/itm/191786659555)
 - Rotary encoder w. click (Something like https://www.elextra.dk/details/H35684/rotary-encoder-18-trin-m-trykknap-funktion)
 - Relay(s) (*I don't really know much about relays and am still experimenting with this. When I originally started this project I did [this drawing for my Mazzer Super Jolly](http://coffee.larsenpedersen.com/mazzersuperjolly/wiringdiagram-relay.png), so perhaps two relays are needed.*)
 - Possibly some sort of power supply
