@@ -19,20 +19,25 @@
 - LED     --> 3V3
 
 ## Interface
-- Turn rotary encoder to pick grinding option:
+Everything is controls by either turning, clicking or holding the rotary encoder:
+
+- <kbd>Turn</kbd>: Pick grinding option:
 
 - **Manual grinding**
-  - Hold down rotary encoder to grind
+  - <kbd>Hold (∞)</kbd> to grind
 
 - **Single grinding**
-  - Click rotary encoder to grind
-  - Hold rotary encoder to enter settings:
-    - Turn rotary encoder to change time
-    - Click rotary encoder to save settings
-    - Hold rotary encoder to exit settings without saving
+  - <kbd>Click</kbd> to start grinding
+    - <kbd>Click</kbd> to cancel grinding 
+  - <kbd>Hold (2s)</kbd> to enter settings:
+    - <kbd>Turn</kbd> to change time
+    - <kbd>Click</kbd> to save settings
+    - <kbd>Hold (2s)</kbd> to exit settings without saving
 
 - **Double grinding**
-  - Hold rotary encoder to enter settings:
-    - Turn rotary encoder to change time
-    - Click rotary encoder to save settings
-    - Hold rotary encoder to exit settings without saving
+  - <kbd>Click</kbd> to start grinding
+    - <kbd>Click</kbd> to cancel grinding 
+  - <kbd>Hold (2s)</kbd> to enter settings:
+    - <kbd>Turn</kbd> to change time
+    - <kbd>Click</kbd> to save settings
+    - <kbd>Hold (2s)</kbd> to exit settings without saving
